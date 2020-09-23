@@ -26,3 +26,20 @@ Migrating to CreateTweets (20140825180010)
   [1m[35m (82.2ms)[0m  [1m[36mcommit transaction[0m
   [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
   [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTweet Load (0.2ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" WHERE "tweets"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTweet Load (0.2ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" WHERE "tweets"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  [1m[36mTweet Load (0.4ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "tweets"[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTweet Create (0.6ms)[0m  [1m[32mINSERT INTO "tweets" ("estado", "monstruo", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["estado", "Vivo"], ["monstruo", "Evaristo"], ["created_at", "2020-09-23 18:07:44.009718"], ["updated_at", "2020-09-23 18:07:44.009718"]]
+  [1m[35m (68.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "tweets"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTweet Create (0.5ms)[0m  [1m[32mINSERT INTO "tweets" ("estado", "monstruo", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["estado", "Muerto"], ["monstruo", "Pedrito"], ["created_at", "2020-09-23 18:08:49.300022"], ["updated_at", "2020-09-23 18:08:49.300022"]]
+  [1m[35m (337.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTweet Create (0.6ms)[0m  [1m[32mINSERT INTO "tweets" ("estado", "monstruo", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["estado", "Vivo"], ["monstruo", "Tomas"], ["created_at", "2020-09-23 18:09:14.673708"], ["updated_at", "2020-09-23 18:09:14.673708"]]
+  [1m[35m (752.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "tweets"[0m
+  [1m[36mTweet Load (0.1ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY "tweets"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
